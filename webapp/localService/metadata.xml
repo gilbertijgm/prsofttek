@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZACA1Q2024_TAEKWONDO_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Academia" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IdAcademia"/>
+                </Key>
+                <Property Name="IdAcademia" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Id academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nombreaca" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nombre de la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DireccionAcademia" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Dirección de la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Localidad" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="localidad de la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Provincia" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label=" provincia donde se encuentra la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pais" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="País donde se encuentra la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelefonoAca" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Número de teléfono de contacto de la academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MasculinoInfant" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Numero de masc infantiles" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FemeninoInfant" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Num de feme infatiles" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MasculinoJuven" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Num de  masc juvenil" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FemeninoJuven" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Num de femeni Juveniles" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MasculinoAdulto" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Num de masc adultos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FemeninoAdulto" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Num de femini Adultos" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalAtletas" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Numero de atletas incristos en la academias" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToAtletaSet" Relationship="ZACA1Q2024_TAEKWONDO_SRV.zacademia_atleta" FromRole="FromRole_zacademia_atleta" ToRole="ToRole_zacademia_atleta"/>
+                <NavigationProperty Name="ToProfesor" Relationship="ZACA1Q2024_TAEKWONDO_SRV.aca_profeor" FromRole="FromRole_aca_profeor" ToRole="ToRole_aca_profeor"/>
+            </EntityType>
+            <EntityType Name="Atleta" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IdAcademia"/>
+                    <PropertyRef Name="IdAtleta"/>
+                </Key>
+                <Property Name="IdAcademia" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="id academia" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IdAtleta" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="id atletea" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dni" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="dni atltea" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NombreAtl" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="nombre atlteta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Edad" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="edad del atleta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Genero" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="sexo del atleta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Categoria" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="cartegoria del atleta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Peso" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="peso de competicion" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cinturon" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nivel de cinturon del atleta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Telefono" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Número de teléfono de contacto del atleta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToAcademia" Relationship="ZACA1Q2024_TAEKWONDO_SRV.zacademia_atleta" FromRole="ToRole_zacademia_atleta" ToRole="FromRole_zacademia_atleta"/>
+            </EntityType>
+            <EntityType Name="Profesor" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IdAcademia"/>
+                    <PropertyRef Name="IdProfesor"/>
+                </Key>
+                <Property Name="IdAcademia" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="ID_ACADEMIA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IdProfesor" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="ID_PROFESOR" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NombrePro" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="NOMBRE_PRO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelefonoPro" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="TELEFONO_PRO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToAcademia" Relationship="ZACA1Q2024_TAEKWONDO_SRV.aca_profeor" FromRole="ToRole_aca_profeor" ToRole="FromRole_aca_profeor"/>
+            </EntityType>
+            <Association Name="aca_profeor" sap:content-version="1">
+                <End Type="ZACA1Q2024_TAEKWONDO_SRV.Academia" Multiplicity="1" Role="FromRole_aca_profeor"/>
+                <End Type="ZACA1Q2024_TAEKWONDO_SRV.Profesor" Multiplicity="1" Role="ToRole_aca_profeor"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_aca_profeor">
+                        <PropertyRef Name="IdAcademia"/>
+                    </Principal>
+                    <Dependent Role="ToRole_aca_profeor">
+                        <PropertyRef Name="IdAcademia"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="zacademia_atleta" sap:content-version="1">
+                <End Type="ZACA1Q2024_TAEKWONDO_SRV.Academia" Multiplicity="1" Role="FromRole_zacademia_atleta"/>
+                <End Type="ZACA1Q2024_TAEKWONDO_SRV.Atleta" Multiplicity="*" Role="ToRole_zacademia_atleta"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_zacademia_atleta">
+                        <PropertyRef Name="IdAcademia"/>
+                    </Principal>
+                    <Dependent Role="ToRole_zacademia_atleta">
+                        <PropertyRef Name="IdAcademia"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZACA1Q2024_TAEKWONDO_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="AcademiaSet" EntityType="ZACA1Q2024_TAEKWONDO_SRV.Academia" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="AtletaSet" EntityType="ZACA1Q2024_TAEKWONDO_SRV.Atleta" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ProfesorSet" EntityType="ZACA1Q2024_TAEKWONDO_SRV.Profesor" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="aca_profeorSet" Association="ZACA1Q2024_TAEKWONDO_SRV.aca_profeor" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="AcademiaSet" Role="FromRole_aca_profeor"/>
+                    <End EntitySet="ProfesorSet" Role="ToRole_aca_profeor"/>
+                </AssociationSet>
+                <AssociationSet Name="zacademia_atletaSet" Association="ZACA1Q2024_TAEKWONDO_SRV.zacademia_atleta" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="AcademiaSet" Role="FromRole_zacademia_atleta"/>
+                    <End EntitySet="AtletaSet" Role="ToRole_zacademia_atleta"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://stks4hpil.eastus2.cloudapp.azure.com:8002/sap/opu/odata/sap/ZACA1Q2024_TAEKWONDO_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://stks4hpil.eastus2.cloudapp.azure.com:8002/sap/opu/odata/sap/ZACA1Q2024_TAEKWONDO_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

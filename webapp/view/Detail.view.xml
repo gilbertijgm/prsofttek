@@ -1,0 +1,166 @@
+<mvc:View controllerName="com.softtek.academiatkd.controller.Detail" height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:c="sap.ui.core"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:layout="sap.ui.layout"
+	xmlns:semantic="sap.f.semantic">
+	<Page id="page" showNavButton="true" navButtonPress="onBack">
+	
+		<semantic:SemanticPage id="mySemanticPage" headerPinnable="true" toggleHeaderOnTitleClick="true" preserveHeaderStateOnScroll="false" titleAreaShrinkRatio="1:1.6:1.6" showFooter="{/showFooter}">
+
+			<!-- Title Heading-->
+			<semantic:titleHeading>
+				<Title id="_IDGenTitle1" text="{Nombreaca}" />
+			</semantic:titleHeading>
+
+			<!-- TitleExpanded content-->
+			<semantic:titleSnappedContent >
+				<Text id="_IDGenText1" text="{IdAcademia}" />
+
+			</semantic:titleSnappedContent>
+
+			<!-- TitleSnapped content-->
+			<semantic:titleExpandedContent>
+				<Text id="_IDGenText2" text="{IdAcademia}"/>
+
+
+			</semantic:titleExpandedContent>
+
+
+			<!-- Header Content -->
+			<semantic:headerContent>
+				<layout:HorizontalLayout id="_IDGenHorizontalLayout1" allowWrapping="true">
+					<layout:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute1" title="UBICACION" class="sapUiTinyMarginBottom"/>
+						<ObjectAttribute id="_IDGenObjectAttribute2" title="Pais" text="{Pais}"/>
+						<ObjectAttribute id="_IDGenObjectAttribute3" title="Provincia/Estado" text="{Provincia}"/>
+						<ObjectAttribute id="_IDGenObjectAttribute4" title="Localidad" text="{Localidad}" />
+					</layout:VerticalLayout>
+
+					<layout:VerticalLayout id="_IDGenVerticalLayout2" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute5" title="CONTACTO" class="sapUiTinyMarginBottom"/>
+						<ObjectAttribute id="_IDGenObjectAttribute6" title="Direccion" text="{DireccionAcademia}"/>
+						<ObjectAttribute id="_IDGenObjectAttribute7" title="Telefono" text="{TelefonoAca}"/>
+
+					</layout:VerticalLayout>
+
+					<layout:VerticalLayout id="_IDGenVerticalLayout3" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute8" title="N° ATLETAS" class="sapUiTinyMarginBottom"/>
+						<ObjectStatus id="_IDGenObjectStatus1" text="{TotalAtletas}" state="Success" />
+					</layout:VerticalLayout>
+
+					<layout:VerticalLayout id="_IDGenVerticalLayout4" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute9" title="N° Infantil" class="sapUiTinyMarginBottom"/>
+						<ObjectStatus id="_IDGenObjectStatus2" text="M: {MasculinoInfant}" state="Success" />
+						<ObjectStatus id="_IDGenObjectStatus3" text="F: {FemeninoInfant}" state="Success" />
+					</layout:VerticalLayout>
+					
+					<layout:VerticalLayout id="_IDGenVerticalLayout5" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute10" title="N° Juvenil" class="sapUiTinyMarginBottom"/>
+						<ObjectStatus id="_IDGenObjectStatus4" text="M: {MasculinoJuven}" state="Success" />
+						<ObjectStatus id="_IDGenObjectStatus5" text="F: {FemeninoJuven}" state="Success" />
+					</layout:VerticalLayout>
+					
+					<layout:VerticalLayout id="_IDGenVerticalLayout6" class="sapUiMediumMarginEnd">
+						<ObjectAttribute id="_IDGenObjectAttribute11" title="N° Adultos" class="sapUiTinyMarginBottom"/>
+						<ObjectStatus id="_IDGenObjectStatus6" text="M: {MasculinoAdulto}" state="Success" />
+						<ObjectStatus id="_IDGenObjectStatus7" text="F: {FemeninoAdulto}" state="Success" />
+					</layout:VerticalLayout>
+					
+
+				</layout:HorizontalLayout>
+
+				<c:Fragment id="_IDGenFragment1"
+                fragmentName="com.softtek.academiatkd.view.fragments.FilterAtleta"
+                type="XML" class="sapUiTinyMarginBottom"
+            />
+			</semantic:headerContent>
+
+			<!-- Content -->
+
+			
+			
+			<semantic:content>
+						
+				<Table id="idAtletaTable" growing="true"
+		growingThreshold="4"
+		growingScrollToLoad="false" inset="false" mode="SingleSelectMaster" selectionChange="onSelectionAtletaItem" items="{ToAtletaSet}" class="sapFSemanticPageAlignContent" width="auto">
+					<headerToolbar>
+						<Toolbar id="tollbarid">
+							<ToolbarSpacer id="tlbspc" />
+							<Button id="tollbarButton" type="Accept" icon="sap-icon://add-employee" press="onCreateAtleta" />
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+
+						<Column id="_IDGenColumn5">
+							<Text id="_IDGenText445" text="Dni"/>
+						</Column>
+
+						<Column id="_IDGenColumn1">
+							<Text id="_IDGenText3" text="Nombre"/>
+						</Column>
+
+						<Column id="_IDGenColumn4" minScreenWidth="Tablet" demandPopin="true">
+							<Text id="_IDGenText8" text="Genero"/>
+						</Column>
+
+						<Column id="_IDGenColumn3" minScreenWidth="Tablet" demandPopin="true">
+							<Text id="_IDGenText5" text="Categoria"/>
+						</Column>
+						
+						<Column id="_IDGenColumn2" minScreenWidth="Tablet" demandPopin="true">
+							<Text id="_IDGenText4" text="Cinturon"/>
+						</Column>
+						
+						
+						<Column id="col4">
+							<Text id="text4" text="Acciones" />
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle" >
+							<cells>
+								<ObjectIdentifier id="_IDGenObjectIdentifier2" title="{Dni}" />
+								<ObjectIdentifier id="_IDGenObjectIdentifier1" title="{NombreAtl}" />
+								<Text id="_IDGenText9" text="{Genero}"/>
+								<Text id="_IDGenText7" text="{Categoria}"/>
+								<Text id="_IDGenText6" text="{Cinturon}"/>
+								<!-- <HBox id="_IDGenText8">
+									<Button id="_IDGenButton4" text="Edit" press="onUpdateAtleta" ariaDescribedBy="defaultButtonDescription genericButtonDescription">
+										<layoutData>
+											<FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
+										</layoutData>
+									</Button>
+									<Button id="_IDGenButton5" type="Reject" text="Delete" press="onDeleteAtleta" ariaDescribedBy="rejectButtonDescription genericButtonDescription">
+										<layoutData>
+											<FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
+										</layoutData>
+									</Button>
+									
+								</HBox> -->
+								<Toolbar id="_IDGenToolbar1">
+									<Button id="_IDGenButton6" icon="sap-icon://edit" press="onUpdateAtleta" />
+									<Button id="_IDGenButton7" type="Reject" icon="sap-icon://delete" press="onDeleteAtleta" />
+								</Toolbar>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</semantic:content>
+
+
+			<semantic:titleMainAction>
+				<semantic:TitleMainAction id="editAction1" text="Edit" press="onUpdateAcademia"/>
+			</semantic:titleMainAction>
+
+			
+
+			
+			
+		</semantic:SemanticPage>
+	</Page>
+</mvc:View>

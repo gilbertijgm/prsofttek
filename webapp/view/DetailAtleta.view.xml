@@ -1,0 +1,55 @@
+<mvc:View xmlns:uxap="sap.uxap" controllerName="com.softtek.academiatkd.controller.DetailAtleta" height="100%"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:semantic="sap.f.semantic">
+    <Page id="page" showNavButton="true" navButtonPress="onBack">
+        <HBox id="_IDGenHBox1" justifyContent="End">
+            <SegmentedButton id="_IDGenSegmentedButton2" class="sapUiSmallMarginEnd" selectionChange="onModeChange">
+                <items>
+                    <SegmentedButtonItem id="_IDGenSegmentedButtonItem1" class="sapUiSmallMarginEnd" width="auto" text="Editar" tooltip="Editar" press="onUpdateAtleta" />
+
+                </items>
+            </SegmentedButton>
+        </HBox>
+        <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+            <f:SimpleForm id="SimpleFormDisplayColumn_oneGroup234" editable="false" layout="ColumnLayout" title="Informacion Completa del Atleta" columnsM="2" columnsL="3" columnsXL="4">
+                <f:content>
+                    <Label id="_IDGenLabel1" text="DNI" />
+                    <Text id="_IDGenText1" text="{Dni}" />
+
+                    <Label id="_IDGenLabel2" text="Nombre y Apellido" />
+                    <Text id="_IDGenText2" text="{NombreAtl}" />
+
+                    <Label id="_IDGenLabel3" text="Edad" />
+                    <Text id="_IDGenText3" text="{Edad}" />
+
+                    <Label id="_IDGenLabel4" text="Genero" />
+                    <Text id="_IDGenText4" text="{Genero}" />
+
+                    <Label id="_IDGenLabel5" text="Categoria" />
+                    <Text id="_IDGenText5" text="{Categoria}" />
+
+                    <Label id="_IDGenLabel6" text="Peso" />
+                    <Text id="_IDGenText6" text="{Peso} Kg" />
+
+                    <Label id="_IDGenLabel7" text="Cinturon" />
+                    <Text id="_IDGenText7" text="{Cinturon}" />
+
+                    <Label id="_IDGenLabel8" text="Telefono" />
+                    <Text id="_IDGenText8" text="{Telefono}" />
+
+
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+
+        <!-- <footer>
+            <OverflowToolbar id="ovftoolbar">
+                <ToolbarSpacer id="ts"/>
+                <Button id="btn1" text="Editar" tooltip="Editar Atleta" press="onCreateEquipo"/>
+            </OverflowToolbar>
+        </footer> -->
+    </Page>
+</mvc:View>

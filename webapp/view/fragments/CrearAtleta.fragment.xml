@@ -1,0 +1,67 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <Dialog id="_IDGenDialog1">
+        <content>
+            <form:SimpleForm id="_IDGenSimpleForm1" editable="false" layout="ResponsiveGridLayout" title="Nuevo Atleta" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+                <form:content>
+
+                    <Label id="_IDGenLabel1" text="DNI" />
+                    <Input id="_IDGenInput1" value="{AtletaCreate>/Dni}" valueLiveUpdate="true" type="Number"/>
+
+                    <Label id="_IDGenLabel2" text="Nombre y Apellido" />
+                    <Input id="_IDGenInput2" value="{AtletaCreate>/NombreAtl}" valueLiveUpdate="true" />
+
+                    <Label id="_IDGenLabel3" text="Edad" />
+                    <Input id="_IDGenInput3" value="{AtletaCreate>/Edad}" valueLiveUpdate="true" type="Number"/>
+                    
+                    <Label id="_IDGenLabel4" text="Genero" />
+                    <Select id="_IDGenSelect1" forceSelection="false" selectedKey="{AtletaCreate>/Genero}" change="onChange">
+                        <core:ListItem id="_IDGenListItem1" key="Femenino" text="Femenino" />
+                        <core:ListItem id="_IDGenListItem2" key="Masculino" text="Masculino" />
+                    </Select>
+
+                    <Label id="_IDGenLabel5" text="Categoria" />
+                    <Select id="_IDGenSelect2" forceSelection="false" selectedKey="{AtletaCreate>/Categoria}" change="onChange">
+                        <core:ListItem id="_IDGenListItem3" key="Infantil" text="Infantil" />
+                        <core:ListItem id="_IDGenListItem4" key="Juvenil" text="Juvenil" />
+                        <core:ListItem id="_IDGenListItem5" key="Adulto" text="Adulto" />
+                    </Select>
+
+                    <Label id="_IDGenLabel6" text="Peso - kg" />
+                    <Input id="_IDGenInput4" value="{AtletaCreate>/Peso}" valueLiveUpdate="true" type="Number"/>
+                    
+                    <Label id="_IDGenLabel7" text="Cinturon" />
+                    <Select id="_IDGenSelect3" forceSelection="false" selectedKey="{AtletaCreate>/Cinturon}" change="onChange">
+                        <core:ListItem id="_IDGenListItem6" key="Blanco" text="Blanco" />
+                        <core:ListItem id="_IDGenListItem7" key="Blanco P. Amarillo" text="Blanco P. Amarillo" />
+                        <core:ListItem id="_IDGenListItem8" key="Amarillo" text="Amarillo" />
+                        <core:ListItem id="_IDGenListItem9" key="Amarillo P. Verde" text="Amarillo P. Verde" />
+                        <core:ListItem id="_IDGenListItem10" key="Verde" text="Verde" />
+                        <core:ListItem id="_IDGenListItem11" key="Verde P. Azul" text="Verde P. Azul" />
+                        <core:ListItem id="_IDGenListItem12" key="Azul" text="Azul" />
+                        <core:ListItem id="_IDGenListItem13" key="Azul P. Rojo" text="Azul P. Rojo" />
+                        <core:ListItem id="_IDGenListItem14" key="Rojo" text="Rojo" />
+                        <core:ListItem id="_IDGenListItem15" key="Rojo P. Negra" text="Rojo P. Negra" />
+                        <core:ListItem id="_IDGenListItem16" key="Negro" text="Negro" />
+                    </Select>
+                    
+                    <Label id="_IDGenLabel8" text="Telefono de Contacto" />
+                    <Input id="_IDGenInput5" value="{AtletaCreate>/Telefono}" valueLiveUpdate="true"/>
+                </form:content>
+                <form:layoutData>
+                    <FlexItemData id="_IDGenFlexItemData1" shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+                </form:layoutData>
+            </form:SimpleForm>
+        </content>
+
+        <beginButton>
+            <Button id="_IDGenButton1" type="Accept" text="Guardar" press="onAtletaCreate" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton2" type="Back" text="Cancelar" press="onCerrarAtletaCreate" />
+        </endButton>
+
+
+    </Dialog>
+</core:FragmentDefinition>

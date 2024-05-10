@@ -1,0 +1,62 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" 
+        search=".onSearch" filterChange=".onFilterChange" showGoOnFB="true"
+        showFilterConfiguration="false" reset="onRestoreFilterFields"
+        xmlns:core="sap.ui.core"
+        xmlns:fb="sap.ui.comp.filterbar"
+        xmlns="sap.m" class="customFilter">
+
+        <fb:filterGroupItems>
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem" name="Dni" label="DNI Atleta" 
+            groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="DniInput" name="Dni" showValueHelp="true" 
+                    change="onChangeDni" valueHelpRequest="onValueHelpDni" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+            
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem1" name="NombreAtl" label="Nombre Atleta" 
+            groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="NombreAtlInput" name="NombreAtl" showValueHelp="true" 
+                    change="onChangeNombreAtl" valueHelpRequest="onValueHelpNombreAtl" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem3" name="Genero" label="Genero" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="GeneroInput" name="Genero" showValueHelp="true" 
+                    change="onChangeGenero" valueHelpRequest="onValueHelpGenero" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem2" name="Categoria" label="Categoria" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="CategoriaInput" name="Categoria" showValueHelp="true" 
+                    change="onChangeCategoria" valueHelpRequest="onValueHelpCategoria" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+            
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem4" name="Cinturon" label="Cinturon" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="CinturonInput" name="Cinturon" showValueHelp="true" 
+                    change="onChangeCinturon" valueHelpRequest="onValueHelpCinturon" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

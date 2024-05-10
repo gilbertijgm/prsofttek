@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <Dialog id="helloDialog">
+        <content>
+            <form:SimpleForm id="SimpleFormDisplay480c" editable="false" layout="ResponsiveGridLayout" title="Nuevo DOJAN" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+                <form:content>
+                    <Label id="_IDGenLabel1c" text="Nombre del DOJAN" />
+                    <Input id="_IDGenInput1c" value="{AcademiaCreate>/Nombreaca}" valueLiveUpdate="true" />
+                    <Label id="_IDGenLabel2c" text="Pais" />
+                    <Select id="_IDGenSelect1" forceSelection="false" selectedKey="{AcademiaCreate>/Pais}" change="onChange">
+                        <core:ListItem id="_IDGenListItem1" key="Argentina" text="Argentina" />
+                        <core:ListItem id="_IDGenListItem2" key="Venezuela" text="Venezuela" />
+                    </Select>
+                    <Label id="_IDGenLabel3c" text="Provincia" />
+                    <Input id="_IDGenInput3c" value="{AcademiaCreate>/Provincia}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel4c" text="Localidad" />
+                    <Input id="_IDGenInput4c" value="{AcademiaCreate>/Localidad}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel5c" text="DireccionAcademia" />
+                    <Input id="_IDGenInput5c" value="{AcademiaCreate>/DireccionAcademia}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel6c" text="Telefono" />
+                    <Input id="_IDGenInput6c" value="{AcademiaCreate>/TelefonoAca}" valueLiveUpdate="true"/>
+                </form:content>
+                <form:layoutData>
+                    <FlexItemData id="_IDGenFlexItemData1" shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+                </form:layoutData>
+            </form:SimpleForm>
+        </content>
+
+        <beginButton>
+            <Button id="_IDGenButton1" type="Accept" text="Guardar" press="onCrearAcademias" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton2" type="Back" text="Cancelar" press="onCerrarCrearAcademias" />
+        </endButton>
+
+
+    </Dialog>
+</core:FragmentDefinition>

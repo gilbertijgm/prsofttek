@@ -1,0 +1,96 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	
+	<VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+		<f:Form id="FormDisplayColumn_threeGroups346"
+			editable="false">
+			<f:title>
+				<core:Title id="_IDGenTitle1" text="Supplier" />
+			</f:title>
+			<f:layout>
+				<f:ColumnLayout id="_IDGenColumnLayout1" 
+					columnsM="3"
+					columnsL="4"
+					columnsXL="6"
+				/>
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer id="_IDGenFormContainer1" title="Address">
+					<f:formElements>
+						<f:FormElement id="_IDGenFormElement1" label="Name">
+							<f:fields>
+								<Text text="{SupplierName}" id="nameText"  />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement2" label="Street">
+							<f:fields>
+								<Text id="_IDGenText1" text="{Street} {HouseNumber}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement3" label="ZIP Code/City">
+							<f:fields>
+								<Text id="_IDGenText2" text="{ZIPCode} {City}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement4" label="Country">
+							<f:fields>
+								<Text text="{Country}" id="countryText" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement5" label="Web">
+							<f:fields>
+								<Link id="_IDGenLink1" text="Url" href="{Url}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer id="_IDGenFormContainer2" title="Contact">
+					<f:formElements>
+						<f:FormElement id="_IDGenFormElement6" label="Twitter">
+							<f:fields>
+								<Text id="_IDGenText3" text="{Twitter}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement7" label="Email">
+							<f:fields>
+								<Text id="_IDGenText4" text="{Email}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement8" label="Tel.">
+							<f:fields>
+								<Text id="_IDGenText5" text="{Tel}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer id="_IDGenFormContainer3" title="Other">
+					<f:formElements>
+						<f:FormElement id="_IDGenFormElement9" label="SMS">
+							<f:fields>
+								<Text id="_IDGenText6" text="{Sms}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement10" label="Mobile">
+							<f:fields>
+								<Text id="_IDGenText7" text="{Mobile}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement11" label="Pager">
+							<f:fields>
+								<Text id="_IDGenText8" text="{Pager}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_IDGenFormElement12" label="Fax">
+							<f:fields>
+								<Text id="_IDGenText9" text="{Fax}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+</core:FragmentDefinition>

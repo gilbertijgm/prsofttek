@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+    <Dialog id="dlgEdit">
+        <content>
+            <form:SimpleForm id="SimpleFormDisplay480e" editable="false" layout="ResponsiveGridLayout" title="Editar DOJAN" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+                <form:content>
+                    <Label id="_IDGenLabel1e" text="Nombre del DOJAN" />
+                    <Input id="_IDGenInput1e" value="{AcademiaEdit>/Nombreaca}" valueLiveUpdate="true" />
+                    <Label id="_IDGenLabel2e" text="Pais" />
+                    <Input id="_IDGenInput2e" value="{AcademiaEdit>/Pais}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel3e" text="Provincia" />
+                    <Input id="_IDGenInput3e" value="{AcademiaEdit>/Provincia}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel4e" text="Localidad" />
+                    <Input id="_IDGenInput4e" value="{AcademiaEdit>/Localidad}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel5e" text="DireccionAcademia" />
+                    <Input id="_IDGenInput5e" value="{AcademiaEdit>/DireccionAcademia}" valueLiveUpdate="true"/>
+                    <Label id="_IDGenLabel6e" text="Telefono" />
+                    <Input id="_IDGenInput6e" value="{AcademiaEdit>/TelefonoAca}" valueLiveUpdate="true"/>
+                </form:content>
+                <form:layoutData>
+                    <FlexItemData id="_IDGenFlexItemData1e" shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+                </form:layoutData>
+            </form:SimpleForm>
+        </content>
+
+        <beginButton>
+            <Button id="_IDGenButton1e" 
+            type="Accept"
+            text="Guardar" 
+            press="onEditAcademia" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton2e" 
+            type="Back"
+            text="Cancelar" 
+            press="onCerrarEditAcademia" />
+        </endButton>
+        
+
+    </Dialog>
+</core:FragmentDefinition>

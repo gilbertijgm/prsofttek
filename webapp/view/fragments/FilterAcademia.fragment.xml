@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <fb:FilterBar id="filterbar" persistencyKey="myPersKey" useToolbar="false" 
+        search=".onSearch" filterChange=".onFilterChange" showGoOnFB="true"
+        showFilterConfiguration="false" reset="onRestoreFilterFields"
+        xmlns:core="sap.ui.core"
+        xmlns:fb="sap.ui.comp.filterbar"
+        xmlns="sap.m" class="customFilter">
+
+        <fb:filterGroupItems>
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem1" name="Nombreaca" label="Nombre Academia" 
+            groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="NombreacaInput" name="Nombreaca" showValueHelp="true" 
+                    change="onChangeNombreaca" valueHelpRequest="onValueHelpNombreaca" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem2" name="Pais" label="Pais" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="PaisInput" name="Pais" showValueHelp="true" 
+                    change="onChangePais" valueHelpRequest="onValueHelpPais" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem3" name="Provincia" label="Provincia" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="ProvinciaInput" name="Provincia" showValueHelp="true" 
+                    change="onChangeProvincia" valueHelpRequest="onValueHelpProvincia" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem id="_IDGenFilterGroupItem4" name="Localidad" label="Localidad" groupName="Group1" visibleInFilterBar="true">
+                <fb:control>
+                    <Input id="LocalidadInput" name="Localidad" showValueHelp="true" 
+                    change="onChangeLocalidad" valueHelpRequest="onValueHelpLocalidad" 
+                     busyIndicatorDelay="0">
+                    </Input>
+                </fb:control>
+            </fb:FilterGroupItem>
+
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>
